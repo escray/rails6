@@ -1,0 +1,26 @@
+<h1>Hello from Rails</h1>
+<p>
+  It is now
+  <%= @time %>
+</p>
+<p>
+  Time to Say
+  <%= link_to "Goodbye", say_goodbye_path %>!
+</p>
+
+<p>
+  Addition:
+  <%= 1+2 %><br/>
+  Concatenation:
+  <%= "cow" + "boy" %><br/>
+  Time in one hour:
+  <%= 1.hour.from_now.localtime %><br/>
+  <% @files = Dir.glob('*') %>
+    <% @files.each do |file| %>
+      <ul>
+
+        file name is:
+        <%= file %>
+      </ul>
+    <% end %>
+  </p>
