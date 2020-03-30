@@ -4,7 +4,7 @@
   </aside>
 <% end %>
 <h1>Your Pragmatic</h1>
-<% if @acc_count > 5 %>
+<% if !@acc_count.nil? && @acc_count > 5 %>
   Your access count:
   <%= @acc_count %>
 <% end %>
