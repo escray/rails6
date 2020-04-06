@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# rails6
+source code for agile development with rails 6
+>>>>>>> 6cec59a3a8e40012d023b3ea333c3d453b177f41
