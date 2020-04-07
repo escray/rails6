@@ -41,7 +41,7 @@ class Order < ApplicationRecord
 
     payment_result = Pago.make_payment(order_id: id,
                                        payment_method: payment_method,
-                                       pay_details: payment_details)
+                                       payment_details: payment_details)
     if payment_result.succeeded?
       OrderMailer.received(self).deliver_later
     else
