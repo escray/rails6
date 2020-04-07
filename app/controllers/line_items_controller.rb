@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class LineItemsController < ApplicationController
+  skip_before_action :authorize, only: :create
   include CurrentCart
   before_action :set_cart, only: [:create]
   before_action :set_line_item, only: %i[show edit update destroy]
@@ -25,8 +26,12 @@ class LineItemsController < ApplicationController
 
   # POST /line_items
   # POST /line_items.json
+  # TODO:
   def create
-    product = Product.find(params[:product_id])
+    product_id = params[:product_id]
+    product_id = params[:line_item][:product_id] if product_id.nil?
+    product = Product.find(product_id)
+    # product = Product.find(params[:line_item][:product_id])
     @line_item = @cart.add_product(product)
     # @line_item = @cart.line_items.build(product: product)
 
