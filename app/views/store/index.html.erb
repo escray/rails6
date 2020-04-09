@@ -4,10 +4,6 @@
   </aside>
 <% end %>
 <h1><%= t('.title_html') %></h1>
-<% if !@acc_count.nil? && @acc_count > 5 %>
-  Your access count:
-  <%= @acc_count %>
-<% end %>
 <ul class="catalog">
   <% cache @products do %>
     <% @products.each do |product| %>
